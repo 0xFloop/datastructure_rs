@@ -1,4 +1,8 @@
 mod linked_list;
 fn main() {
-    linked_list::try_linked_list()
+    let result = linked_list::try_linked_list();
+    match result {
+        Ok(()) => (),
+        Err(err) => panic!("{}", err),
+    }
 }
